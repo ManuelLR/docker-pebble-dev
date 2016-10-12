@@ -5,6 +5,10 @@ You must accept the [Pebble Terms of Use](https://developer.getpebble.com/legal/
 and the [SDK License Agreement](https://developer.getpebble.com/legal/sdk-license/) 
 to use the Pebble SDK.
 
+## Compile Dockerfile
+```sh
+sudo docker build -t manuellr/pebble-dev .
+```
 
 ## Note
 With the Pebble Tool 4.0 and above it is possible to switch the SDK version on 
