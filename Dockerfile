@@ -43,5 +43,9 @@ VOLUME /pebble/
 
 # set run command
 WORKDIR /pebble/
+
+# install sdk
+RUN /bin/bash -c 'yes | pebble sdk install latest'
+
 CMD /bin/bash
 
