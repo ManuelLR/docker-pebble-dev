@@ -11,8 +11,8 @@ RUN apt-get update && \
 ENV PEBBLE_TOOL_VERSION pebble-sdk-4.4.1-linux64
 
 # get pebble tool
-RUN curl -sSL https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${PEBBLE_TOOL_VERSION}.tar.bz2 \
-        | tar -v -C /opt/ --totals -xj
+RUN curl -SL https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${PEBBLE_TOOL_VERSION}.tar.bz2 \
+        | tar -C /opt/ --totals -xj && echo "PEBBLE_TOOL downloaded !"
 
 # prepare python environment 
 WORKDIR /opt/${PEBBLE_TOOL_VERSION}
