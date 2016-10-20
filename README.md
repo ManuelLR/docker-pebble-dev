@@ -1,6 +1,7 @@
 # Pebble development environment
 
-**Updated to pebble-sdk-4.4.1**  ![alt text](https://www.emojibase.com/resources/img/emojis/apple/x203c.png.pagespeed.ic.HxnlpP5g88.png "!!")
+**Updated to pebble-tool-4.5**  ![alt text](https://www.emojibase.com/resources/img/emojis/apple/x203c.png.pagespeed.ic.HxnlpP5g88.png "!!")
+**Updated to pebble-sdk-4.2.1**
 
 ## Legal Note
 You must accept the [Pebble Terms of Use](https://developer.getpebble.com/legal/terms-of-use/)
