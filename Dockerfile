@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # set the version of the pebble tool
-ENV PEBBLE_TOOL_VERSION pebble-sdk-4.4.1-linux64
+ENV PEBBLE_TOOL_VERSION pebble-sdk-4.5-linux64
 
 # get pebble tool
 RUN curl -SL https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${PEBBLE_TOOL_VERSION}.tar.bz2 \
@@ -44,8 +44,11 @@ VOLUME /pebble/
 # set run command
 WORKDIR /pebble/
 
+# set the version of the pebble sdk
+ENV PEBBLE_SDK_VERSION 4.2.1
+
 # install sdk
-RUN /bin/bash -c 'yes | pebble sdk install latest'
+RUN /bin/bash -c 'yes | pebble sdk install ${PEBBLE_SDK_VERSION}'
 
 CMD /bin/bash
 
