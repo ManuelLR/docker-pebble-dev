@@ -45,7 +45,7 @@ VOLUME /pebble/
 WORKDIR /pebble/
 
 # set the version of the pebble sdk
-ENV PEBBLE_SDK_VERSION 4.2.1
+ENV PEBBLE_SDK_VERSION 4.3
 
 # install sdk
 RUN /bin/bash -c 'yes | pebble sdk install ${PEBBLE_SDK_VERSION}'
