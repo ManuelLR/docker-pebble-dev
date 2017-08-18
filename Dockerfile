@@ -11,7 +11,6 @@ RUN apt-get update && \
 ENV PEBBLE_TOOL_VERSION pebble-sdk-4.5-linux64
 
 # set the symbolic link for nodejs to node
-
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # get pebble tool
