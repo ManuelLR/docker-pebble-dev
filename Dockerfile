@@ -3,12 +3,16 @@ MAINTAINER ManuelLR
 
 # update system and get base packages
 RUN apt-get update && \
-    apt-get install -y curl npm python2.7-dev python-pip libfreetype6-dev bash-completion libsdl1.2debian libfdt1 libpixman-1-0 libglib2.0-dev && \
+    apt-get install -y curl nodejs npm python2.7-dev python-pip libfreetype6-dev bash-completion libsdl1.2debian libfdt1 libpixman-1-0 libglib2.0-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # set the version of the pebble tool
 ENV PEBBLE_TOOL_VERSION pebble-sdk-4.5-linux64
+
+# set the symbolic link for nodejs to node
+
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # get pebble tool
 RUN curl -SL https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${PEBBLE_TOOL_VERSION}.tar.bz2 \

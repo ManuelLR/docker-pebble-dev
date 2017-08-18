@@ -20,7 +20,7 @@ docker run -it \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v ~/.Xauthority:/home/pebble/.Xauthority \
-    -v ~/pathToYourProject/$PROJECT/:/pebble/ \
+    -v /pathToYourProject/$PROJECT/:/pebble/ \
     manuellr/pebble-dev
 ```
 
